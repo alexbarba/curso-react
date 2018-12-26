@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './media.css';
+import PropTypes from 'prop-types';
 
 class Media extends Component {
-  
   render() {
     const { title, author, image } = this.props;
     return (
       <div className="card Media">
         <div className="card-image waves-effect waves-block waves-light">
-          <img class="activator" src={image}/>
+          <img className="activator" src={image}/>
         </div>
         <div className="card-content">
           <span className="card-title activator grey-text text-darken-4">{title}</span>
@@ -17,8 +17,15 @@ class Media extends Component {
       </div>
     )
   }
-}
 
+  
+}
+// Validando tipado en propiedades
+Media.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired
+}
 
 
 export default Media;
