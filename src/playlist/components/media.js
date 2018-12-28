@@ -3,10 +3,13 @@ import './media.css';
 import PropTypes from 'prop-types';
 
 class Media extends Component {
+  handleClick = (event) => {
+    console.log(this.props.image)
+  }
   render() {
     const { title, author, image } = this.props;
     return (
-      <div className="card Media">
+      <div className="card Media" onClick={this.handleClick}>
         <div className="card-image waves-effect waves-block waves-light">
           <img className="activator" src={image}/>
         </div>
