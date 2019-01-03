@@ -4,14 +4,21 @@ import './playlist.css'
 
 class Playlist extends Component{
   render(){
-    const playlist = this.props.data.categories[0].playlist;
+    const { title, description, playlist } = this.props;
     return(
-      <div className='Playlist'>
-        {
-          playlist.map((item) => {
-            return <Media {...item} key={item.id} />
-          })
-        }
+      <div>
+        <div>
+          <h1>{title}</h1>
+          <h3>{description}</h3>
+        </div>
+        
+        <div className='Playlist'>
+          {
+            playlist.map((item) => {
+              return <Media {...item} key={item.id} />
+            })
+          }
+        </div>
       </div>
     )
   }
