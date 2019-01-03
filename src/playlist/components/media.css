@@ -1,7 +1,8 @@
 .Media {
   margin-left: 15px;
   display: inline-block;
-  width: 260px;
+  
+  width: 250px;
 }
 
 .Media:hover .Media-cover {
@@ -22,9 +23,7 @@
 }
 
 .Media-title {
-  margin: 5px 0 0 0;
-  color: #44546b;
-  white-space: normal;
+  display:inline;
 }
 
 .Media-author {
