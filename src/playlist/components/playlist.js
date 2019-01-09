@@ -8,8 +8,8 @@ class Playlist extends Component{
     return(
       <div>
         <div>
-          <h1>{title}</h1>
-          <h3>{description}</h3>
+          <h5>{description}</h5>
+          <h3>{title}</h3>
         </div>
         
         <div className='Playlist'>
