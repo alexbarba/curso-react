@@ -9,7 +9,7 @@ function Category(props){
         <h3>{props.title}</h3>
       </div>
       
-      <div className='Playlist'>
+      <div>
         <Playlist
           playlist={props.playlist}
         />

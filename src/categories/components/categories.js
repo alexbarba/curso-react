@@ -4,7 +4,7 @@ import Category from './category'
 
 function Categories(props){
   return(
-    <div className='Contenido'>
+    <div>
       {
         props.categories.map((item) => {
           return <Category {...item} key={item.id} />
