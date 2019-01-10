@@ -1,5 +1,5 @@
 import React from'react';
-import ReactDOM from'react-dom';
+import { render } from'react-dom';
 // Importamos dependencias de React
 import Home from '../pages/containers/home';
 // Importamos los componentes generados
@@ -11,5 +11,5 @@ const app = document.getElementById('app');
 // const holaMundo = <h1>Hola Mundo</h1>;
 // Insertamos en una constante lo que queremos renderizar
 
-ReactDOM.render(<Home/>, app);
+render(<Home data={data}/>, app);
 // Le decimos a ReactDOM que renderizar y donde renderizar

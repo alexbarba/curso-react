@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './media.css';
 import PropTypes from 'prop-types';
 
-class Media extends Component {
+class Media extends PureComponent {
   render() {
     const { title, cover, author } = this.props;
-    // const { author } = this.state;
     return (
       <div className="card small">
         <div className="card-image waves-effect waves-block waves-light">
