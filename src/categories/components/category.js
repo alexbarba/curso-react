@@ -1,5 +1,6 @@
 import React from 'react';
 import Playlist from '../../playlist/components/playlist';
+import './category.css';
 
 function Category(props){
   return(
@@ -10,7 +11,7 @@ function Category(props){
       </div>
       
       <div>
-        <Playlist
+        <Playlist className='Category'
           playlist={props.playlist}
         />
       </div>

@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #171c30;
+  color: white;
+}
+.HomeLayout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 250px calc(100vw - 270px);
+  grid-template-areas: "related categories";
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100vw;
+  
+}

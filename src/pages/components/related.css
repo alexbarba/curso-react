@@ -1,0 +1,5 @@
+.Related {
+  grid-area: related;
+  width: 300px;
+  min-height: 100vh;
+}

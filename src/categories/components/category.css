@@ -1,0 +1,10 @@
+.Category{
+  /* Utilizamos CSS Grid Layout para maquetar las listas */
+  max-width: 100%;
+  
+}
+
+h3{
+  
+  margin-top: 2px;
+}
