@@ -4,17 +4,12 @@ import './category.css';
 
 function Category(props){
   return(
-    <div>
-      <div>
-        <h5>{props.description}</h5>
-        <h3>{props.title}</h3>
-      </div>
-      
-      <div>
-        <Playlist className='Category'
-          playlist={props.playlist}
-        />
-      </div>
+    <div className="Category">
+      <p className="categoryDescription">{props.description}</p>
+      <h2 className="categoryTitle">{props.title}</h2>
+      <Playlist
+        playlist={props.playlist}
+      />
     </div>
   )
 }
