@@ -5,11 +5,11 @@ import Home from '../pages/containers/home';
 // Importamos los componentes generados
 import data from '../api.json';
 
-const app = document.getElementById('app');
+const homeContainer = document.getElementById('home-container');
 // Referenciamos un elemento con ID app
 
 // const holaMundo = <h1>Hola Mundo</h1>;
 // Insertamos en una constante lo que queremos renderizar
 
-render(<Home data={data}/>, app);
+render(<Home data={data}/>, homeContainer);
 // Le decimos a ReactDOM que renderizar y donde renderizar
