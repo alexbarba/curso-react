@@ -6,7 +6,7 @@ class Media extends PureComponent {
   render() {
     const { title, cover, author } = this.props;
     return (
-      <div className="card small">
+      <div className="card small" onClick={this.props.handleOpenModal}>
         <div className="card-image waves-effect waves-block waves-light">
           <img className="activator" src={cover}/>
         </div>
