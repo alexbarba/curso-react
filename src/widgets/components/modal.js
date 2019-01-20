@@ -6,8 +6,8 @@ function Modal(props) {
     <div className="Modal">
       Esto es un modal
       {props.children}
-      <button onClick={props.handleClick} class="btn waves-effect waves-light red lighten-2" type="submit" name="action">Cerrar
-        <i class="material-icons close"></i>
+      <button onClick={props.handleClick} className="btn waves-effect waves-light red lighten-2" type="submit" name="action">Cerrar
+        <i className="material-icons close"></i>
       </button>
       
     </div>
