@@ -40,14 +40,15 @@ class Home extends Component {
           <Categories
             categories={this.props.data.categories}
             handleOpenModal={this.handleOpenModal}
-          />
+            />
           {
             this.state.modalVisible &&
             <ModalContainer>
               <Modal
                 handleClick={this.handleCloseModal}
-              >
+                >
                 <VideoPlayer/>
+                
               </Modal>
             </ModalContainer>
           }
