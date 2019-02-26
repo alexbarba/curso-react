@@ -1,5 +1,6 @@
 import React from 'react';
 import VolumenIcon from '../../icons/components/volume';
+import Mute from '../../icons/components/mute';
 import './volume.css';
 
 function Volume(props) {
@@ -7,10 +8,20 @@ function Volume(props) {
     <button
       className="Volume"
     >
-      <VolumenIcon
-        color="white"
-        size={25}
-      />
+      <div onClick={props.handleVolumeToggle}>
+        {
+          props.volume ?
+            <VolumenIcon
+              color="white"
+              size={25}
+            />
+          :
+            <Mute
+              color="white"
+              size={25}
+            />
+        }
+      </div>
       <div className="Volume-range">
         <input
           type="range"

@@ -9,6 +9,8 @@ import {formatTime} from '../components/utilities';
 import ProgressBar from '../components/progress-bar';
 import Spinner from '../components/spinner';
 import Volume from '../components/volume';
+import FullScreen from '../components/full-screen';
+
 
 class VideoPlayer extends Component{
   state = {
@@ -60,13 +62,25 @@ class VideoPlayer extends Component{
   }
   handleVolumeChange = event => {
     this.video.volume = event.target.value;
-  }
-  handleVolumeToggle = event => {
-    this.setState({
-      lastVolume: this.state.volume,
-      volume: this.state.volume===0 ? this.state.lastVolume : 0
+    this.setState ({
+      volume: this.video.volume
     })
-    this.video.volume = this.state.lastVolume
+  }
+
+  handleVolumeToggle = () => {
+    const lastValue = this.video.volume;
+    this.setState ({lastValue})
+    if (this.video.volume !== 0) {
+      this.video.volume = 0
+      this.setState ({
+        volume: this.video.volume
+      })
+    } else {
+      this.video.volume = this.state.lastValue
+      this.setState ({
+        volume: this.video.volume
+      })
+    }
   }
 
   render(){
@@ -93,7 +107,9 @@ class VideoPlayer extends Component{
           <Volume
             handleVolumeChange={this.handleVolumeChange}
             handleVolumeToggle={this.handleVolumeToggle}
+            volume={this.state.volume}
           />
+          <FullScreen/>
         </VideoPlayerControls>
         <Spinner
           active={this.state.loading}
