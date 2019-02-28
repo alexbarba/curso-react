@@ -5,7 +5,7 @@ import Title from '../components/title';
 import PlayPause from '../components/play-pausa';
 import Timer from '../components/timer';
 import VideoPlayerControls from '../components/video-player-control';
-import {formatTime} from '../components/utilities';
+import {formatTime, isFullScreen, requestFullScreen, exitFullScreen} from '../components/utilities';
 import ProgressBar from '../components/progress-bar';
 import Spinner from '../components/spinner';
 import Volume from '../components/volume';
@@ -82,12 +82,27 @@ class VideoPlayer extends Component{
       })
     }
   }
+  handleFullScreenClick = event => {
+    console.log("FullScreen")
+    if(!isFullScreen()){
+      requestFullScreen(this.player);
+    } else {
+      exitFullScreen();
+    }
+    
+  }
+
+  setRef = element => {
+    this.player = element
+  }
 
   render(){
     return(
-      <VideoPlayerLayout>
+      <VideoPlayerLayout
+        setRef={this.setRef}
+      >
         <Title
-          title="Esto es un video chido!"
+          title={this.props.title}
         />
         <VideoPlayerControls >
           <PlayPause
@@ -109,7 +124,9 @@ class VideoPlayer extends Component{
             handleVolumeToggle={this.handleVolumeToggle}
             volume={this.state.volume}
           />
-          <FullScreen/>
+          <FullScreen 
+            handleFullScreenClick={this.handleFullScreenClick}
+          />
         </VideoPlayerControls>
         <Spinner
           active={this.state.loading}
@@ -122,7 +139,7 @@ class VideoPlayer extends Component{
           handleSeeking={this.handleSeeking}
           handleSeeked={this.handleSeeked}
           handleReady={this.handleReady}
-          src='http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4'
+          src={this.props.src}
         />
       </VideoPlayerLayout>
     )

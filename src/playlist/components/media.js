@@ -2,11 +2,16 @@ import React, { PureComponent } from 'react';
 import './media.css';
 import PropTypes from 'prop-types';
 
+
 class Media extends PureComponent {
+  handleClick = (event) => {
+    this.props.handleOpenModal(this.props);
+  }
   render() {
+    
     const { title, cover, author } = this.props;
     return (
-      <div className="card small" onClick={this.props.handleOpenModal}>
+      <div className="card small" onClick={this.handleClick}>
         <div className="card-image waves-effect waves-block waves-light">
           <img className="activator" src={cover}/>
         </div>
