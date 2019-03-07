@@ -12,7 +12,6 @@ const Search = (props) => (
       placeholder='Buscar'
       ref={props.setRef}
       onChange={props.handleChange}
-      value={props.value}
     />
   </form>
 )

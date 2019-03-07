@@ -1,0 +1,35 @@
+¿Cómo ponemos un estilos inline en jsx para asignarle un color de fondo a algún elemento? 
+
+¿Qué método se usa para enlazar eventos del dom a una función desde el constructor?  2 
+
+¿Cómo puedo asignar propiedades base a componentes? 2 
+
+Es una característica de las propiedades:
+
+¿Qué método del ciclo de vida es invocado cuando el componente recibe nuevas propiedades? 2 
+
+¿Cómo validamos que un texto sea ‘audio’ o ‘video’?
+
+¿Qué método de react-dom nos permite renderizar componentes en diferentes etiquetas del dom?
+
+Examen 2
+
+¿Qué método se usa para enlazar eventos del dom a una función desde el constructor? 
+bind
+
+¿Cómo puedo asignar propiedades base a componentes? 
+utilizar el metodo constructor pasandole props y usando el metodo super tambien con las props como parametro.
+constructor(props){
+    super(props);
+    this.state = {
+        author: props.author
+    }
+}
+¿Qué método del ciclo de vida es invocado cuando el componente recibe nuevas propiedades? 
+componentWillReceiveProps()
+
+¿En que método del ciclo de vida podemos poner nuestro estado inicial?
+Constructor
+
+¿Qué método de react-dom nos permite renderizar componentes en diferentes etiquetas del dom?
+createPortal
