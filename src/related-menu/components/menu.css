@@ -1,0 +1,10 @@
+.Menu{
+  border-top-style: solid;
+  border-top-color: white;
+}
+
+.Menu h6{
+  cursor:pointer;
+  vertical-align: center;
+  padding-left:25px;
+}
